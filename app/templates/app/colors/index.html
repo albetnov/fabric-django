@@ -1,0 +1,51 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Colors {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Colors</h3>
+        <a href="{% url 'ColorCreate' %}" x-addable="Color"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="colors-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Hex</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for color in colors %}
+                    <tr>
+                        <td>{{ color.name }}</td>
+                        <td><div style="background-color: {{ color.hex }}; width: 15px;height:15px; display: inline-block"></div> {{ color.hex }}</td>
+                        <td>{{ color.created_at }}</td>
+                        <td x-action="{% url 'ColorEdit' color.id %}|{% url 'ColorDelete' color.id %}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#colors-table", {
+    columns: [
+        { select: 3, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

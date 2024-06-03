@@ -1,0 +1,49 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Cloth Types {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Cloth Types</h3>
+        <a href="{% url 'ClothTypeCreate' %}" x-addable="Cloth Type"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="cloth-type-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for cloth_type in cloth_types %}
+                    <tr>
+                        <td>{{ cloth_type.name }}</td>
+                        <td>{{ cloth_type.created_at }}</td>
+                        <td x-action="{% url 'ClothTypeEdit' cloth_type.id %}|{% url 'ClothTypeDelete' cloth_type.id %}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#cloth-type-table", {
+    columns: [
+        { select: 2, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Order Detail {% endblock %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h3 class="card-title">Order Details</h3>
+        <p class="card-subtitle">Reference ID: {{ order.ref_id }}</p>
+    </div>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <h5>Customer Information</h5>
+                <p><strong>Name:</strong> {{ order.customer.name }}</p>
+                <p><strong>Phone:</strong> {{ order.customer.phone }}</p>
+                <p><strong>Address:</strong> {{ order.customer.address }}</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Order Information</h5>
+                <p><strong>Special Type:</strong> {{ order.special_type.name }}</p>
+                <p><strong>Material:</strong> {{ order.material.name }}</p>
+                <p><strong>Color:</strong> <span class="badge" style="background-color: {{ order.color.hex }}">{{ order.color.name }}</span></p>
+                <p><strong>Quantity:</strong> {{ order.qty }}</p>
+                <p><strong>Price:</strong> ${{ order.price }}</p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <h5>Additional Details</h5>
+                <p><strong>Worker Amount:</strong> {{ order.worker_amount }}</p>
+                <p><strong>Complexity:</strong> {{ order.complexity }}</p>
+                <p><strong>Size:</strong> {{ order.size }}</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Dates</h5>
+                <p><strong>Created At:</strong> {{ order.created_at }}</p>
+                <p><strong>Updated At:</strong> {{ order.updated_at }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <div class="text-right">
+            <a href="{% if request.GET.back %}{{ request.GET.back }}{% else %}{% url 'Orders' %}{% endif %}" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

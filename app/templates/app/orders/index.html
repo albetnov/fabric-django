@@ -1,0 +1,64 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Orders {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Orders</h3>
+        <a href="{% url 'OrderCreate' %}" x-addable="Order"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Ref No.</th>
+                        <th>Customer</th>
+                        <th>Material</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Difficulty</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.ref_id }}</td>
+                        <td>{{ order.customer.name }}</td>
+                        <td>{{ order.material.name }}</td>
+                        <td>{{ order.qty }}</td>
+                        <td>{{ order.price }}</td>
+                        <td><div class="badge bg-{% if order.complexity == 'easy' %}success{% elif order.complexity == 'medium' %}warning{% else %}danger{% endif %}" x-ucfirst>{{ order.complexity }}</div></td>
+                        <td>{{ order.created_at }}</td>
+                        <td>
+                            <a href="{% url 'OrderShow' order.id %}" class="btn btn-sm btn-info">
+                                <i class="fa-solid fa-eye"></i>
+                                Detail
+                            </a>
+                            <a href="{% url 'OrderDelete' order.id %}" class="btn btn-sm btn-danger" x-deletable></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#orders-table", {
+    columns: [
+        { select: 7, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

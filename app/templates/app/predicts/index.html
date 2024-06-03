@@ -1,0 +1,162 @@
+{% extends 'app/layouts/base.html' %}
+{% load crispy_forms_tags static %}
+{% block title %} Predict {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Predict</h3>
+    </div>
+
+    <div class="card-body">
+        {% crispy form %}
+
+        <div class="card d-none" id="overview-card">
+            <div class="card-header">Order Overview</div>
+
+            <div class="card-body">
+                <ul>
+                </ul>
+
+                <a class="btn btn-primary btn-sm mt-3" id="view-order">View Order</a>
+            </div>
+        </div>
+
+        <div class="card d-none mt-3 mx-auto" style="max-width: 70rem" id="result-wrapper">
+            <div class="card-header bg-primary text-white">Result</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <canvas id="dotLottie-canvas" class="d-block mx-auto" width="250" height="250"></canvas>
+                    </div>
+                    <div class="col-6 align-self-center">
+                        <p>
+                            <span class="display-5">Predicted Time: </span>
+                            <span id="result" class="display-5"></span>
+                            <span id="resultTime" class="display-6 ml-1 text-muted"></span>
+                        </p>
+
+                        <p>
+                            <span class="display-5">Order Time: </span>
+                            <span id="orderTime" class="display-5"></span>
+                        </p>
+
+                        <div class="alert mt-3" id="result-alert"></div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <button class="btn btn-primary" disabled id="predictBtn">Predict</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="module">
+    import { DotLottie } from "https://esm.sh/@lottiefiles/dotlottie-web";
+
+
+    const predictBtn = document.querySelector('#predictBtn')
+    predictBtn.addEventListener('click', predict)
+    const resultWrapper = document.querySelector('#result-wrapper')
+    const resultEl = document.querySelector('#result')
+    const resultTimeEl = document.querySelector('#resultTime')
+    const orderTimeEl = document.querySelector('#orderTime')
+    const queryParams = new URLSearchParams(document.location.search)
+    const isModelTypeHidden = document.querySelector('#id_model_type')
+    const resultAlert = document.querySelector('#result-alert')
+
+    async function predict() {
+        const form = document.querySelector('#form')
+        const formData = new FormData(form)
+
+        formData.append('csrfmiddlewaretoken', '{{ csrf_token }}')
+
+        if(!isModelTypeHidden) {
+            const modelType = queryParams.get('model_type') ?? 'rf'
+            formData.append('model_type', ['rf', 'dt'].includes(modelType) ? modelType : 'rf')
+        }
+
+        predictBtn.innerHTML = '<i class="fa-solid fa-spinner spin"></i> Predicting...'
+        predictBtn.disabled = true
+        resultWrapper.classList.add('d-none')
+        resultEl.innerText = ''
+
+        const result = await fetch("{% url 'Predict' %}", {
+            body: formData,
+            method: 'POST',
+        })
+
+        const json = await result.json()
+
+        predictBtn.innerHTML = 'Predict'
+        predictBtn.disabled = false
+        resultWrapper.classList.remove('d-none')
+        resultEl.innerText = `${json.date}`
+        resultTimeEl.innerText = `${json.time} (+${Math.trunc(json.result)}h)`
+        orderTimeEl.innerText = `${json.order_date}`
+        const canvas = document.querySelector("#dotLottie-canvas");
+        let src = "{% static 'app/assets/preparing.lottie' %}";
+
+        if(json.done) {
+            resultEl.classList.add('text-success')
+            resultTimeEl.classList.replace('text-muted', 'text-success')
+            resultAlert.classList.remove('alert-warning')
+            resultAlert.classList.add('alert-success')
+            resultAlert.innerText = 'Your order should be ready now.'
+            src = "{% static 'app/assets/finished.lottie' %}";
+        } else {
+            resultAlert.classList.remove('alert-success')
+            resultAlert.classList.add('alert-warning')
+            resultAlert.innerText = 'Your order will be ready soon.'
+        }
+
+        new DotLottie({src, canvas, loop: true, autoplay: true});
+    }
+
+    const idOrder = document.querySelector('#id_order')
+    const overviewCard = document.querySelector('#overview-card')
+
+    idOrder.addEventListener('change', async (e) => {
+        const val = e.target.value
+        resultWrapper.classList.add('d-none')
+
+        if(val === "0") {
+            predictBtn.disabled = true
+            overviewCard.classList.add('d-none')
+            return
+        }
+
+        predictBtn.disabled = true
+        idOrder.disabled = true
+
+        const result = await fetch(`{% url "PredictGetOrder" %}?order=${val}`)
+
+        const json = await result.json()
+        const data = json.result
+
+        overviewCard.classList.remove('d-none')
+
+        overviewCard.querySelector('ul').innerHTML = `
+            <li>Material: ${data.material}</li>
+            <li>Special Type: ${data.special_type}</li>
+            <li>Cloth Type: ${data.cloth_type}</li>
+            <li>Quantity: ${data.qty}</li>
+            <li>Price: ${data.price}</li>
+            <li>Worker Amount: ${data.worker_amount}</li>
+            <li>Color: ${data.color}</li>
+            <li>Difficulty: ${data.difficulty}</li>
+            <li>Size: ${data.size}</li>
+            <li>Order Date: ${data.order_date}</li>
+
+        `
+
+        overviewCard.querySelector('#view-order').href = `/orders/show/${data.order_id}?back=/predict`
+
+        idOrder.disabled = false
+        predictBtn.disabled = false
+    });
+</script>
+{% endblock %}

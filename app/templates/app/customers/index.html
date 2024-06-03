@@ -1,0 +1,53 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Customers {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Customers</h3>
+        <a href="{% url 'CustomerCreate' %}" x-addable="Customer"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="customer-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for customer in customers %}
+                    <tr>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.phone }}</td>
+                        <td>{{ customer.address }}</td>
+                        <td>{{ customer.created_at }}</td>
+                        <td x-action="{% url 'CustomerEdit' customer.id %}|{% url 'CustomerDelete' customer.id %}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#customer-table", {
+    columns: [
+        { select: 4, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

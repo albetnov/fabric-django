@@ -1,0 +1,53 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Users {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Users</h3>
+        <a href="{% url 'UserCreate' %}" x-addable="User"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="users-table">
+                <thead>
+                    <tr>
+                        <th>Name / Username</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Joined Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{% if user.first_name %} {{ user.first_name }} {{ user.last_name }} {% else %} {{ user.username }} {% endif %}</td>
+                        <td>{% if user.email %} {{ user.email }} {% else %} <div class="badge bg-info">No Email</div> {% endif %}</td>
+                        <td>{% if user.is_active %}<span class="badge bg-success">Active</span> {% else %} <span class="badge bg-danger">Inactive</span>{% endif %}</td>
+                        <td>{{ user.date_joined }}</td>
+                        <td x-action="{% url 'UserEdit' user.id %}|{% url 'UserDelete' user.id %}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#users-table", {
+    columns: [
+        { select: 4, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Special Types {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Special Types</h3>
+        <a href="{% url 'SpecialTypeCreate' %}" x-addable="Special Type"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="special-type-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cloth Type</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for special_type in special_types %}
+                    <tr>
+                        <td>{{ special_type.name }}</td>
+                        <td>{{ special_type.cloth_type.name }}</td>
+                        <td>{{ special_type.created_at }}</td>
+                        <td x-action="{% url 'SpecialTypeEdit' special_type.id %}|{% url 'SpecialTypeDelete' special_type.id %}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#special-type-table", {
+    columns: [
+        { select: 3, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

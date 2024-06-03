@@ -1,0 +1,301 @@
+Order Quantity,Order Date,Jenis,Khusus,Size,Kompleksitas,Bahan,color,Jumlah Pekerja,Production Time
+30,Weekdays,Celana,Jeans,M,Menengah,Denim,Biru,Sedang,50
+10,Weekdays,Baju,Formal Pria,L,Menengah,Katun,Hitam,Sedang,30
+40,Weekdays,Tas,Ransel,Standar,Menengah,Kulit,Coklat,Sedang,70
+20,Weekdays,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Sedang,40
+50,Weekend,Dress,Pesta,S,Tinggi,Satin,Pink,Sedikit,180
+10,Weekdays,Kemeja,Flanel,XL,Tinggi,Katun,Merah Tartan,Sedikit,40
+30,Weekdays,Topi,Trucker,Standar,Rendah,Mesh,Hitam,Banyak,30
+50,Weekdays,Jaket,Parka,M,Menengah,Nylon,Hijau Army,Sedikit,100
+20,Weekdays,Sepatu,Sandal,M,Rendah,Kulit Sintetis,Coklat,Sedikit,20
+30,Weekdays,Kaus,Kaki,Standar,Rendah,Katun,Abu-abu,Banyak,30
+20,Weekdays,Gaun,Pengiring,L,Tinggi,Sifon,Lavender,Sedikit,90
+40,Weekdays,Tas,Tote,Standar,Rendah,Kanvas,Biru Muda,Banyak,40
+20,Weekdays,Blouse,Peplum,M,Rendah,Spandeks,Hitam,Sedikit,20
+40,Weekdays,Kemeja,Polo,XL,Rendah,Polyester,Biru Dongker,Sedikit,40
+40,Weekdays,Celana,Jogger,M,Menengah,Fleece,Abu-abu,Sedikit,80
+30,Weekdays,Dompet,Lipat,Standar,Menengah,Kulit,Coklat Tua,Banyak,60
+10,Weekdays,Topi,Baseball,Standar,Rendah,Kanvas,Merah,Banyak,10
+20,Weekdays,Rompi,Denim,L,Menengah,Denim,Biru Muda,Sedikit,50
+40,Weekdays,Sepatu,Loafer,L,Menengah,Suede,Hitam,Sedikit,70
+10,Weekdays,Kaus,Oblong,L,Rendah,Katun,Putih,Sedikit,10
+10,Weekdays,Gaun,Midi,XL,Tinggi,Katun,Motif Bunga,Sedikit,40
+1,Weekdays,Tas,Selempang,Standar,Rendah,Kulit Sintetis,Hitam,Banyak,1
+10,Weekdays,Kemeja,Denim,M,Menengah,Denim,Biru Tua,Sedikit,10
+10,Weekdays,Hoodie,Zipper,XL,Menengah,Fleece,Abu-abu,Sedikit,30
+1,Weekdays,Sandal,Jepit,L,Rendah,Karet,Hitam,Sedikit,1
+10,Weekdays,Kaos,Raglan,L,Rendah,Katun,Putih-Biru,Sedikit,10
+10,Weekdays,Celana,Chino,M,Menengah,Twill,Khaki,Sedikit,10
+10,Weekdays,Topi,Bucket,Standar,Rendah,Kanvas,Hijau Army,Banyak,10
+20,Weekdays,Jaket,Harrington,M,Menengah,Polyester,Hitam,Sedikit,30
+1,Weekdays,Sepatu,Oxford,L,Menengah,Kulit,Coklat,Sedikit,1
+20,Weekdays,Kemeja,Batik,XL,Tinggi,Katun,Motif Batik,Sedikit,70
+10,Weekdays,Dress,Maxi,L,Tinggi,Chiffon,Hitam,Sedikit,50
+30,Weekdays,Tas,Backpack,Standar,Rendah,Polyester,Biru,Banyak,30
+40,Weekdays,Blazer,Formal,M,Menengah,Wool,Abu-abu,Sedikit,90
+10,Weekdays,Sneakers,Slip-on,L,Menengah,Kanvas,Putih,Sedikit,20
+30,Weekdays,Kaus,Polo,XL,Rendah,Pique,Merah,Sedikit,30
+20,Weekdays,Celana,Cargo,M,Menengah,Twill,Hijau Army,Sedikit,50
+50,Weekdays,Topi,Fedora,Standar,Rendah,Wool,Coklat Tua,Banyak,50
+20,Weekdays,Jaket,Bomber,M,Menengah,Kulit,Hitam,Sedikit,30
+40,Weekdays,Sepatu,Boots,L,Menengah,Suede,Coklat,Sedikit,80
+30,Weekend,Kemeja,Flanel,XL,Tinggi,Katun,Hijau Tartan,Sedikit,120
+50,Weekdays,Dress,Mini,S,Menengah,Spandeks,Hitam,Sedikit,100
+10,Weekdays,Tas,Clutch,Standar,Tinggi,Satin,Emas,Banyak,30
+30,Weekdays,Sweater,Rajut,XL,Menengah,Wool,Biru,Sedikit,70
+60,Weekdays,Sandal,Gunung,L,Menengah,Karet,Hitam,Sedikit,110
+40,Weekdays,Kaos,V-neck,M,Rendah,Katun,Abu-abu,Sedikit,40
+60,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru,Sedikit,120
+10,Weekdays,Topi,Beanie,Standar,Rendah,Rajut,Abu-abu,Banyak,10
+50,Weekdays,Jaket,Parka,L,Menengah,Canvas,Hitam,Sedikit,90
+30,Weekdays,Sepatu,Slip-on,L,Menengah,Canvas,Putih,Sedikit,50
+50,Weekdays,Kaos,Polo,XL,Menengah,Katun,Hijau,Sedikit,110
+10,Weekdays,Celana,Pendek Cargo,S,Menengah,Twill,Abu-abu,Sedikit,10
+60,Weekdays,Dress,Cocktail,M,Menengah,Satin,Merah Marun,Sedikit,110
+40,Weekend,Tas,Tangan,Standar,Tinggi,Kulit,Hitam,Banyak,170
+60,Weekend,Sneakers,Casual,L,Tinggi,Kanvas,Biru Muda,Sedikit,240
+1,Weekdays,Kemeja,Kasual,L,Rendah,Katun,Putih,Sedikit,1
+50,Weekdays,Topi,Fedora,Standar,Menengah,Wol,Hitam,Banyak,110
+1,Weekdays,Rompi,Pendek,M,Rendah,Denim,Biru Tua,Sedikit,1
+50,Weekdays,Sepatu,Kets,M,Rendah,Sintetis,Abu-abu,Sedikit,50
+1,Weekdays,Blouse,Kemeja,S,Tinggi,Sifon,Lavender,Sedikit,10
+70,Weekdays,Kaus,Kaki Panjang,Standar,Rendah,Wol,Hitam,Banyak,70
+70,Weekend,Blazer,Slim Fit,XL,Rendah,Polyester,Abu-abu,Bedikit,70
+90,Weekend,Gaun,Malam,L,Rendah,Satin,Hitam,Bedikit,90
+60,Off,Tas,Selempang,Standar,Menengah,Kanvas,Abu-abu,Banyak,120
+70,Off,Hoodie,Oversized,XL,Menengah,Fleece,Abu-abu Muda,Sedikit,140
+90,Weekend,Sepatu,Formal,L,Rendah,Kulit,Coklat,Bedikit,90
+80,Weekend,Kaus,Polo,M,Menengah,Katun,Biru,Bedikit,150
+70,Weekend,Celana,Jeans Slim,M,Menengah,Denim,Biru Tua,Sedikit,140
+80,Weekend,Topi,Trucker,Standar,Rendah,Kanvas,Merah Muda,Banyak,80
+80,Weekend,Jaket,Harrington,L,Tinggi,Katun,Hijau Army,Bedikit,320
+100,Weekend,Dress,Shift,S,Rendah,Cotton,Putih,Bedikit,100
+80,Weekend,Tas,Ransel,Standar,Menengah,Nylon,Hitam,Banyak,160
+80,Weekend,Sandal,Jepit,L,Menengah,Karet,Biru,Bedikit,160
+60,Weekend,Kaos,Raglan,XL,Rendah,Katun,Hitam-Abu,Sedikit,60
+80,Off,Celana,Jogger,M,Rendah,Fleece,Abu-abu Muda,Bedikit,80
+70,Off,Kemeja,Denim,XL,Menengah,Denim,Biru Langit,Sedikit,130
+90,Off,Topi,Baseball,Standar,Rendah,Kanvas,Hitam,Banyak,90
+100,Off,Jaket,Kulit,M,Menengah,Kulit,Coklat,Bedikit,190
+70,Off,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Bedikit,150
+90,Weekend,Blouse,Peplum,M,Tinggi,Spandeks,Merah Marun,Bedikit,350
+80,Weekend,Kemeja,Pendek,L,Tinggi,Katun,Putih,Bedikit,310
+90,Weekend,Dress,Maxi,L,Rendah,Chiffon,Biru,Bedikit,90
+90,Weekend,Tas,Clutch,Standar,Tinggi,Sintetis,Emas,Banyak,370
+100,Off,Sweater,Rajut,XL,Menengah,Rajut,Hijau Army,Bedikit,200
+80,Weekend,Sandal,Gunung,L,Rendah,Karet,Hitam,Bedikit,80
+90,Weekend,Kaus,Polo,XL,Menengah,Pique,Putih,Bedikit,190
+100,Weekend,Celana,Chino,M,Rendah,Twill,Coklat,Bedikit,100
+100,Off,Topi,Beanie,Standar,Menengah,Rajut,Hitam,Banyak,190
+90,Off,Jaket,Bomber,M,Menengah,Polyester,Hijau Army,Bedikit,180
+90,Off,Sepatu,Boots,L,Tinggi,Kulit,Hitam,Bedikit,340
+70,Off,Kemeja,Flanel,XL,Menengah,Katun,Kotak-kotak Merah,Bedikit,140
+80,Off,Dress,Mini,S,Tinggi,Katun,Polkadot Hitam-Putih,Bedikit,300
+70,Off,Tas,Backpack,Standar,Menengah,Kanvas,Biru Muda,Banyak,140
+80,Off,Hoodie,Zipper,XL,Menengah,Fleece,Hitam,Bedikit,170
+90,Off,Sepatu,Loafer,L,Rendah,Suede,Coklat,Bedikit,90
+100,Off,Kemeja,Batik,XL,Menengah,Katun,Batik Biru,Bedikit,200
+70,Weekdays,Kaos,V-neck,M,Rendah,Katun,Merah,Sedikit,70
+70,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru Tua,Sedikit,130
+60,Weekdays,Topi,Bucket,Standar,Menengah,Kanvas,Abu-abu,Banyak,120
+60,Weekend,Jaket,Parka,L,Rendah,Nylon,Hitam,Sedikit,60
+10,Weekdays,Sepatu,Boots,L,Tinggi,Kulit,Hitam,Sedikit,50
+10,Weekdays,Blouse,Peplum,M,Rendah,Spandeks,Hitam,Sedikit,10
+10,Weekdays,Dress,Pesta,S,Tinggi,Satin,Pink,Sedikit,30
+20,Weekdays,Hoodie,Oversized,XL,Menengah,Fleece,Abu-abu Muda,Sedikit,40
+1,Weekdays,Celana,Chino,M,Rendah,Twill,Coklat,Sedikit,1
+10,Weekdays,Jaket,Parka,L,Menengah,Canvas,Hitam,Sedikit,20
+20,Weekdays,Celana,Pendek Cargo,S,Menengah,Twill,Abu-abu,Sedikit,30
+1,Weekdays,Kaus,Polo,XL,Menengah,Pique,Putih,Sedikit,1
+10,Weekdays,Dress,Maxi,L,Tinggi,Chiffon,Hitam,Sedikit,40
+20,Weekdays,Celana,Jogger,M,Rendah,Fleece,Abu-abu Muda,Sedikit,20
+10,Weekdays,Tas,Tangan,Standar,Tinggi,Kulit,Hitam,Banyak,30
+20,Weekdays,Topi,Fedora,Standar,Menengah,Wol,Hitam,Banyak,30
+1,Weekdays,Topi,Bucket,Standar,Rendah,Kanvas,Hijau Army,Banyak,1
+10,Weekdays,Kaus,Oblong,L,Rendah,Katun,Putih,Sedikit,10
+20,Weekdays,Gaun,Pengiring,L,Tinggi,Sifon,Lavender,Sedikit,80
+10,Weekdays,Kemeja,Denim,M,Menengah,Denim,Biru Tua,Sedikit,10
+10,Weekdays,Sandal,Gunung,L,Menengah,Karet,Hitam,Sedikit,30
+1,Weekdays,Kemeja,Kasual,L,Rendah,Katun,Putih,Sedikit,1
+20,Weekdays,Blazer,Formal,M,Menengah,Wool,Abu-abu,Sedikit,30
+10,Weekdays,Sepatu,Kets,L,Rendah,Sintetis,Abu-abu,Sedikit,10
+10,Weekdays,Sepatu,Slip-on,L,Menengah,Canvas,Putih,Sedikit,10
+20,Weekdays,Jaket,Harrington,M,Menengah,Polyester,Hitam,Sedikit,30
+10,Weekdays,Dress,Mini,S,Tinggi,Katun,Polkadot Hitam-Putih,Sedikit,40
+1,Weekdays,Celana,Jeans Slim,M,Menengah,Denim,Biru Tua,Sedikit,10
+10,Weekdays,Tas,Ransel,Standar,Menengah,Kulit,Coklat,Banyak,20
+10,Weekdays,Kemeja,Batik,XL,Menengah,Katun,Batik Biru,Sedikit,20
+1,Weekdays,Sandal,Jepit,L,Rendah,Karet,Hitam,Sedikit,1
+20,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru,Sedikit,30
+10,Weekdays,Kaos,Raglan,XL,Rendah,Katun,Hitam-Abu,Sedikit,10
+20,Weekdays,Topi,Baseball,Standar,Rendah,Kanvas,Hitam,Banyak,20
+10,Weekdays,Sepatu,Loafer,L,Rendah,Suede,Coklat,Sedikit,10
+20,Weekdays,Kemeja,Flanel,XL,Menengah,Katun,Kotak-kotak Merah,Sedikit,40
+1,Weekdays,Gaun,Malam,L,Rendah,Satin,Hitam,Sedikit,1
+10,Weekdays,Dress,Shift,S,Rendah,Cotton,Putih,Sedikit,10
+10,Weekdays,Dress,Cocktail,M,Menengah,Satin,Merah Marun,Sedikit,10
+10,Weekdays,Topi,Trucker,Standar,Rendah,Kanvas,Merah Muda,Banyak,10
+1,Weekdays,Celana,Jeans,M,Menengah,Denim,Biru,Sedikit,1
+20,Weekdays,Tas,Backpack,Standar,Menengah,Kanvas,Biru Muda,Banyak,40
+10,Weekdays,Kaus,Polo,XL,Menengah,Katun,Hijau,Sedikit,30
+20,Weekdays,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Sedikit,30
+20,Weekdays,Sweater,Rajut,XL,Menengah,Rajut,Hijau Army,Sedikit,40
+10,Weekdays,Sepatu,Formal,L,Rendah,Kulit,Coklat,Sedikit,10
+10,Weekdays,Hoodie,Zipper,XL,Menengah,Fleece,Hitam,Sedikit,10
+10,Weekdays,Topi,Beanie,Standar,Menengah,Rajut,Hitam,Banyak,20
+10,Weekdays,Kemeja,Flanel,XL,Tinggi,Katun,Merah Tartan,Sedikit,40
+20,Weekdays,Tas,Selempang,Standar,Rendah,Kulit Sintetis,Hitam,Banyak,20
+10,Weekdays,Sepatu,Sandal,L,Rendah,Kulit Sintetis,Coklat,Sedikit,10
+1,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru Tua,Sedikit,10
+10,Weekdays,Kemeja,Polo,XL,Rendah,Polyester,Biru Dongker,Sedikit,10
+10,Weekdays,Topi,Fedora,Standar,Rendah,Wool,Coklat Tua,Banyak,10
+20,Weekdays,Celana,Chino,M,Menengah,Twill,Khaki,Sedikit,30
+1,Weekdays,Dress,V-neck,M,Tinggi,Katun,Abu-abu,Sedikit,10
+10,Weekdays,Kaus,Kaki,Standar,Rendah,Katun,Abu-abu,Banyak,10
+1,Weekdays,Blouse,Peplum,M,Tinggi,Spandeks,Merah Marun,Sedikit,1
+20,Weekdays,Jaket,Kulit,M,Menengah,Kulit,Coklat,Sedikit,40
+10,Weekdays,Celana,Jogger,M,Menengah,Fleece,Abu-abu,Sedikit,30
+1,Weekdays,Jaket,Bomber,M,Menengah,Kulit,Hitam,Sedikit,10
+20,Weekdays,Dress,Maxi,L,Rendah,Chiffon,Biru,Sedikit,20
+10,Weekdays,Kemeja,Pendek,L,Tinggi,Katun,Putih,Sedikit,40
+20,Weekdays,Sneakers,Slip-on,L,Menengah,Kanvas,Putih,Sedikit,40
+10,Weekdays,Dress,Pesta,S,Tinggi,Satin,Pink,Sedikit,50
+10,Weekdays,Tas,Clutch,Standar,Tinggi,Satin,Emas,Banyak,30
+10,Weekdays,Celana,Jeans,M,Menengah,Denim,Biru,Sedikit,10
+20,Weekdays,Sepatu,Oxford,L,Menengah,Kulit,Coklat,Sedikit,30
+1,Weekdays,Blazer,Slim Fit,XL,Rendah,Polyester,Abu-abu,Sedikit,1
+20,Weekdays,Dress,Mini,S,Menengah,Spandeks,Hitam,Sedikit,40
+10,Weekdays,Tas,Tote,Standar,Rendah,Kanvas,Biru Muda,Banyak,10
+1,Weekdays,Sandal,Gunung,L,Rendah,Karet,Hitam,Sedikit,1
+20,Weekdays,Kemeja,Denim,XL,Menengah,Denim,Biru Langit,Sedikit,30
+10,Weekdays,Celana,Jeans,M,Menengah,Denim,Biru,Sedikit,20
+20,Weekdays,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Sedikit,30
+1,Weekdays,Kemeja,Flanel,XL,Tinggi,Katun,Hijau Tartan,Sedikit,10
+20,Weekdays,Jaket,Parka,M,Menengah,Nylon,Hijau Army,Sedikit,40
+10,Weekdays,Topi,Trucker,Standar,Rendah,Mesh,Hitam,Banyak,10
+10,Weekdays,Celana,Pendek Cargo,S,Menengah,Twill,Abu-abu,Sedikit,20
+1,Weekdays,Kemeja,Polo,XL,Rendah,Pique,Merah,Sedikit,1
+10,Weekdays,Celana,Pendek Jeans,M,Menengah,Denim,Biru Tua,Sedikit,30
+10,Weekdays,Tas,Ransel,Standar,Menengah,Kulit,Coklat,Banyak,30
+10,Weekdays,Hoodie,Oversized,XL,Menengah,Fleece,Abu-abu Muda,Sedikit,20
+20,Weekdays,Kaus,Polo,XL,Menengah,Pique,Putih,Sedikit,40
+10,Weekdays,Tas,Backpack,Standar,Rendah,Polyester,Biru,Banyak,10
+20,Weekdays,Kaus,Kaki Panjang,Standar,Rendah,Wol,Hitam,Banyak,20
+1,Weekdays,Dress,Shift,S,Rendah,Cotton,Putih,Sedikit,1
+10,Weekdays,Topi,Fedora,Standar,Menengah,Wol,Hitam,Banyak,20
+1,Weekdays,Dress,Cocktail,M,Menengah,Satin,Merah Marun,Sedikit,10
+10,Weekdays,Jaket,Harrington,M,Menengah,Polyester,Hitam,Sedikit,10
+20,Weekdays,Sepatu,Kets,L,Rendah,Sintetis,Abu-abu,Sedikit,20
+10,Weekdays,Sepatu,Slip-on,L,Menengah,Canvas,Putih,Sedikit,20
+10,Weekdays,Blouse,Kemeja,S,Tinggi,Sifon,Lavender,Sedikit,20
+10,Weekdays,Kemeja,Batik,XL,Tinggi,Katun,Motif Batik,Sedikit,30
+10,Weekdays,Dress,V-neck,M,Tinggi,Katun,Abu-abu,Sedikit,50
+20,Weekdays,Sepatu,Loafer,L,Menengah,Suede,Hitam,Sedikit,30
+1,Weekdays,Kaus,Oblong,L,Rendah,Katun,Putih,Sedikit,1
+20,Weekdays,Celana,Cargo,M,Menengah,Twill,Hijau Army,Sedikit,40
+10,Weekdays,Tas,Tangan,Standar,Tinggi,Kulit,Hitam,Banyak,50
+1,Weekdays,Topi,Baseball,Standar,Rendah,Kanvas,Merah,Banyak,1
+20,Weekdays,Dress,Midi,XL,Rendah,Katun,Motif Bunga,Sedikit,20
+10,Weekdays,Rompi,Denim,L,Menengah,Denim,Biru Muda,Sedikit,20
+20,Weekdays,Celana,Chino,M,Rendah,Twill,Coklat,Sedikit,20
+10,Weekdays,Sweater,Rajut,XL,Menengah,Wool,Biru,Sedikit,30
+10,Weekdays,Blouse,Peplum,M,Tinggi,Spandeks,Merah Marun,Sedikit,20
+20,Weekdays,Hoodie,Oversized,XL,Menengah,Fleece,Abu-abu Muda,Sedikit,30
+1,Weekdays,Kaus,Kaki,Standar,Rendah,Katun,Abu-abu,Banyak,1
+10,Weekdays,Jaket,Bomber,M,Menengah,Kulit,Hitam,Sedikit,10
+1,Weekdays,Kemeja,Denim,XL,Menengah,Denim,Biru Langit,Sedikit,10
+10,Weekdays,Sepatu,Slip-on,L,Menengah,Canvas,Putih,Sedikit,20
+10,Weekdays,Dress,Mini,S,Menengah,Spandeks,Hitam,Sedikit,30
+10,Weekdays,Dress,Cocktail,M,Menengah,Satin,Merah Marun,Sedikit,10
+10,Weekdays,Celana,Pendek Cargo,S,Menengah,Twill,Abu-abu,Sedikit,20
+10,Weekdays,Tas,Clutch,Standar,Tinggi,Satin,Emas,Banyak,30
+20,Weekdays,Topi,Fedora,Standar,Menengah,Wol,Hitam,Banyak,40
+1,Weekdays,Sepatu,Loafer,L,Menengah,Suede,Hitam,Sedikit,1
+20,Weekdays,Tas,Backpack,Standar,Rendah,Polyester,Biru,Banyak,20
+10,Weekdays,Dress,V-neck,M,Tinggi,Katun,Abu-abu,Sedikit,50
+1,Weekdays,Kaus,Polo,XL,Rendah,Pique,Merah,Sedikit,1
+20,Weekdays,Kemeja,Pendek,L,Tinggi,Katun,Putih,Sedikit,60
+20,Weekdays,Sepatu,Kets,L,Rendah,Sintetis,Abu-abu,Sedikit,20
+20,Weekdays,Celana,Pendek Jeans,M,Menengah,Denim,Biru Tua,Sedikit,40
+10,Weekdays,Celana,Chino,M,Rendah,Twill,Coklat,Sedikit,10
+10,Weekdays,Celana,Jeans,M,Menengah,Denim,Biru,Sedikit,30
+10,Weekdays,Kemeja,Polo,XL,Rendah,Polyester,Biru Dongker,Sedikit,10
+1,Weekdays,Kemeja,Batik,XL,Tinggi,Katun,Motif Batik,Sedikit,10
+20,Weekdays,Tas,Ransel,Standar,Menengah,Kulit,Coklat,Banyak,30
+1,Weekdays,Jaket,Harrington,M,Menengah,Polyester,Hitam,Sedikit,10
+10,Weekdays,Sepatu,Loafer,L,Rendah,Suede,Coklat,Sedikit,10
+10,Weekdays,Topi,Bucket,Standar,Rendah,Kanvas,Hijau Army,Banyak,10
+10,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru,Sedikit,20
+10,Weekdays,Tas,Tangan,Standar,Tinggi,Kulit,Hitam,Banyak,50
+10,Weekdays,Blazer,Slim Fit,XL,Rendah,Polyester,Abu-abu,Sedikit,10
+10,Weekdays,Kemeja,Flanel,XL,Tinggi,Katun,Merah Tartan,Sedikit,30
+1,Weekdays,Hoodie,Zipper,XL,Menengah,Fleece,Hitam,Sedikit,1
+20,Weekdays,Dress,Shift,S,Rendah,Cotton,Putih,Sedikit,20
+10,Weekdays,Tas,Selempang,Standar,Rendah,Kulit Sintetis,Hitam,Banyak,10
+1,Weekdays,Sandal,Gunung,L,Rendah,Karet,Hitam,Sedikit,1
+20,Weekdays,Dress,Pesta,S,Tinggi,Satin,Pink,Sedikit,80
+20,Weekdays,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Sedikit,40
+20,Weekdays,Topi,Baseball,Standar,Rendah,Kanvas,Merah,Banyak,20
+20,Weekdays,Jaket,Parka,L,Menengah,Canvas,Hitam,Sedikit,40
+10,Weekdays,Celana,Jogger,M,Rendah,Fleece,Abu-abu Muda,Sedikit,10
+10,Weekdays,Kaus,Polo,XL,Menengah,Katun,Hijau,Sedikit,30
+10,Weekdays,Celana,Cargo,M,Menengah,Twill,Hijau Army,Sedikit,10
+10,Weekdays,Kemeja,Flanel,XL,Tinggi,Katun,Hijau Tartan,Sedikit,40
+1,Weekdays,Tas,Ransel,Standar,Menengah,Kulit,Coklat,Banyak,10
+10,Weekdays,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Sedikit,10
+10,Weekdays,Gaun,Pengiring,L,Tinggi,Sifon,Lavender,Sedikit,50
+1,Weekdays,Topi,Trucker,Standar,Rendah,Mesh,Hitam,Banyak,1
+10,Weekdays,Kaus,Oblong,L,Rendah,Katun,Putih,Sedikit,10
+10,Weekdays,Dress,Maxi,L,Rendah,Chiffon,Biru,Sedikit,10
+10,Weekdays,Sandal,Jepit,L,Rendah,Karet,Hitam,Sedikit,10
+20,Weekdays,Sepatu,Boots,L,Tinggi,Kulit,Hitam,Sedikit,60
+1,Weekdays,Sweater,Rajut,XL,Menengah,Wool,Biru,Sedikit,1
+20,Weekdays,Tas,Tote,Standar,Rendah,Kanvas,Biru Muda,Banyak,20
+10,Weekdays,Kaus,Polo,XL,Menengah,Pique,Putih,Sedikit,20
+1,Weekdays,Rompi,Denim,L,Menengah,Denim,Biru Muda,Sedikit,1
+20,Weekdays,Dress,Midi,XL,Rendah,Katun,Motif Bunga,Sedikit,20
+20,Weekdays,Jaket,Kulit,M,Menengah,Kulit,Coklat,Sedikit,40
+20,Weekdays,Sepatu,Sandal,L,Rendah,Kulit Sintetis,Coklat,Sedikit,20
+20,Weekdays,Kemeja,Kasual,L,Rendah,Katun,Putih,Sedikit,20
+10,Weekdays,Topi,Fedora,Standar,Menengah,Wol,Hitam,Banyak,20
+10,Weekdays,Blouse,Kemeja,S,Tinggi,Sifon,Lavender,Sedikit,60
+10,Weekdays,Sepatu,Oxford,L,Menengah,Kulit,Coklat,Sedikit,10
+10,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru Tua,Sedikit,20
+1,Weekdays,Dress,Mini,S,Tinggi,Katun,Polkadot Hitam-Putih,Sedikit,20
+10,Weekdays,Kemeja,Denim,M,Menengah,Denim,Biru Tua,Sedikit,10
+10,Weekdays,Sneakers,Slip-on,L,Menengah,Kanvas,Putih,Sedikit,30
+1,Weekdays,Celana,Jeans Slim,M,Menengah,Denim,Biru Tua,Sedikit,10
+10,Weekdays,Topi,Beanie,Standar,Menengah,Rajut,Hitam,Banyak,20
+10,Weekdays,Kemeja,Flanel,XL,Menengah,Katun,Kotak-kotak Merah,Sedikit,10
+10,Weekdays,Dress,Maxi,L,Tinggi,Chiffon,Hitam,Sedikit,30
+20,Weekdays,Gaun,Malam,L,Rendah,Satin,Hitam,Sedikit,20
+1,Weekdays,Celana,Chino,M,Menengah,Twill,Khaki,Sedikit,1
+20,Weekdays,Topi,Bucket,Standar,Menengah,Kanvas,Abu-abu,Banyak,30
+10,Weekdays,Dress,Pesta,S,Tinggi,Satin,Pink,Sedikit,50
+1,Weekdays,Kemeja,Polo,M,Menengah,Katun,Biru,Sedikit,1
+20,Weekdays,Sepatu,Formal,L,Rendah,Kulit,Coklat,Sedikit,20
+20,Weekdays,Kaos,V-neck,M,Rendah,Katun,Merah,Sedikit,20
+20,Weekdays,Kaus,Raglan,L,Rendah,Katun,Putih-Biru,Sedikit,20
+20,Weekend,Tas,Clutch,Standar,Tinggi,Satin,Emas,Banyak,80
+10,Weekdays,Blouse,Peplum,M,Rendah,Spandeks,Hitam,Sedikit,10
+10,Weekdays,Celana,Pendek Cargo,S,Menengah,Twill,Abu-abu,Sedikit,30
+10,Weekdays,Dress,Cocktail,M,Menengah,Satin,Merah Marun,Sedikit,10
+10,Weekdays,Dress,Maxi,L,Rendah,Chiffon,Biru,Sedikit,10
+1,Weekdays,Hoodie,Zipper,XL,Menengah,Fleece,Hitam,Sedikit,10
+10,Weekdays,Sepatu,Kets,L,Rendah,Sintetis,Abu-abu,Sedikit,10
+10,Weekdays,Jaket,Parka,M,Menengah,Nylon,Hijau Army,Sedikit,30
+1,Weekdays,Kaus,Polo,XL,Rendah,Pique,Merah,Sedikit,1
+10,Weekdays,Celana,Pendek Jeans,L,Menengah,Denim,Biru,Sedikit,20
+10,Weekdays,Topi,Baseball,Standar,Rendah,Kanvas,Hitam,Banyak,10
+10,Weekdays,Tas,Selempang,Standar,Rendah,Kulit Sintetis,Hitam,Banyak,10
+20,Weekend,Dress,V-neck,M,Tinggi,Katun,Abu-abu,Sedikit,60
+1,Weekdays,Topi,Trucker,Standar,Rendah,Kanvas,Merah Muda,Banyak,1
+20,Weekdays,Celana,Jeans,M,Menengah,Denim,Biru,Sedikit,30
+10,Weekdays,Sepatu,Sneakers,L,Menengah,Kanvas,Putih,Sedikit,20
+1,Weekdays,Kemeja,Denim,XL,Menengah,Denim,Biru Langit,Sedikit,1
+20,Weekdays,Kaus,Polo,XL,Menengah,Pique,Putih,Sedikit,40
+20,Weekdays,Celana,Jeans Slim,M,Menengah,Denim,Biru Tua,Sedikit,40
+20,Weekdays,Jaket,Bomber,M,Menengah,Polyester,Hijau Army,Sedikit,30
+20,Weekdays,Sandal,Jepit,L,Menengah,Karet,Biru,Sedikit,40
+10,Weekdays,Kemeja,Batik,XL,Tinggi,Katun,Motif Batik,Sedikit,40
+10,Weekdays,Sweater,Rajut,XL,Menengah,Rajut,Hijau Army,Sedikit,30

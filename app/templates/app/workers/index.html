@@ -1,0 +1,53 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Workers {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Workers</h3>
+        <a href="{% url 'WorkerCreate' %}" x-addable="Worker"></a>
+        {% include 'app/partials/alert.html' %}
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="workers-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for worker in workers %}
+                    <tr>
+                        <td>{{ worker.name }}</td>
+                        <td>{{ worker.phone }}</td>
+                        <td>{{ worker.address }}</td>
+                        <td>{{ worker.created_at }}</td>
+                        <td x-action="{% url 'WorkerEdit' worker.id %}|{% url 'WorkerDelete' worker.id %}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const dt = new window.simpleDatatables.DataTable("#workers-table", {
+    columns: [
+        { select: 4, sortable: false },
+    ]
+})
+
+dt.on('datatable.page', () => {
+    resolveAllQueries();
+})
+</script>
+{% endblock %}

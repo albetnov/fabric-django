@@ -1,0 +1,16 @@
+{% extends 'app/layouts/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} {{ state }} Worker {% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>{{ state }} Worker</h3>
+    </div>
+
+    <div class="card-body">
+        {% crispy form %}
+    </div>
+
+    <div class="card-footer" x-form-actions="{% url 'Workers' %}"></div>
+</div>
+{% endblock %}

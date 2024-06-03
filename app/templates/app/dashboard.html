@@ -1,0 +1,216 @@
+{% extends 'app/layouts/base.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block content %} 
+
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+          <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon">
+                  <i class="fa-solid fa-users fa-2x"></i>
+              </div>
+              <div>
+                  <h5 class="card-title mb-0">Total Customers</h5>
+                  <p class="card-text">{{ total_customers }}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+          <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon">
+                  <i class="fa-solid fa-boxes fa-2x"></i>
+              </div>
+              <div>
+                  <h5 class="card-title mb-0">Materials Qty</h5>
+                  <p class="card-text">{{ materials_qty.total_qty }}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+          <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon">
+                  <i class="fa-solid fa-user-tie fa-2x"></i>
+              </div>
+              <div>
+                  <h5 class="card-title mb-0">Total Workers</h5>
+                  <p class="card-text">{{ total_workers }}</p>
+              </div>
+          </div>
+      </div>
+    </div> 
+
+    <div class="col">
+      <div class="card">
+          <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon">
+                  <i class="fa-brands fa-jedi-order fa-2x"></i>
+              </div>
+              <div>
+                  <h5 class="card-title mb-0">Total Orders</h5>
+                  <p class="card-text">{{ total_orders }}</p>
+              </div>
+          </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">Orders Overtime</div>
+        <div class="card-body">
+          <canvas id="ordersOverTimeChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">Orders By Special Type</div>
+        <div class="card-body">
+          <canvas id="ordersBySpecialTypeChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">Customers Overtime</div>
+        <div class="card-body">
+          <canvas id="customersOverTimeChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">Workers Overtime</div>
+        <div class="card-body">
+          <canvas id="workersOverTimeChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div class="card" style="max-height: 500px;">
+        <div class="card-header">Common Colors in Orders</div>
+        <div class="card-body">
+          <canvas id="colorsInOrdersChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+const ordersOverTime = JSON.parse('{{ orders_over_time|safe }}');
+
+const ordersOverTimeData = {
+    labels: ordersOverTime.map(item => item.day),
+    datasets: [{
+        label: 'Number of Orders',
+        data: ordersOverTime.map(item => item.count),
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+};
+
+new Chart(document.getElementById('ordersOverTimeChart').getContext('2d'), {
+    type: 'line',
+    data: ordersOverTimeData
+});
+
+const ordersBySpecialTypeData = JSON.parse('{{ orders_by_special_type|safe }}');
+
+const ordersBySpecialTypeChartData = {
+    labels: ordersBySpecialTypeData.map(item => item.name),
+    datasets: [{
+        label: 'Number of Orders',
+        data: ordersBySpecialTypeData.map(item => item.order_count),
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    }]
+};
+
+new Chart(document.getElementById('ordersBySpecialTypeChart').getContext('2d'), {
+    type: 'bar',
+    data: ordersBySpecialTypeChartData
+});
+
+const colorsInOrders = JSON.parse('{{ colors_in_orders|safe }}');
+
+const colorsInOrdersChartData = {
+    labels: colorsInOrders.map(item => item.name),
+    datasets: [{
+        label: 'Number of Orders',
+        data: colorsInOrders.map(item => item.order_count),
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+    }]
+};
+
+new Chart(document.getElementById('colorsInOrdersChart').getContext('2d'), {
+    type: 'pie',
+    data: colorsInOrdersChartData,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
+
+const customersOverTime = JSON.parse('{{ customers_over_time|safe }}');
+
+const customersOverTimeChartData = {
+    labels: customersOverTime.map(item => item.day),
+    datasets: [{
+        label: 'Number of Customers',
+        data: customersOverTime.map(item => item.count),
+        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 1
+    }]
+};
+
+new Chart(document.getElementById('customersOverTimeChart').getContext('2d'), {
+    type: 'line',
+    data: customersOverTimeChartData
+});
+
+const workersOverTime = JSON.parse('{{ workers_over_time|safe }}'); 
+
+const workersOverTimeChartData = {
+    labels: workersOverTime.map(item => item.day),
+    datasets: [{
+        label: 'Number of Workers',
+        data: workersOverTime.map(item => item.count),
+        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+        borderColor: 'rgba(255, 159, 64, 1)',
+        borderWidth: 1
+    }]
+};
+
+new Chart(document.getElementById('workersOverTimeChart').getContext('2d'), {
+    type: 'line',
+    data: workersOverTimeChartData
+});
+</script>
+{% endblock %}
