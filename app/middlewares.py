@@ -9,7 +9,7 @@ class AuthMiddleware:
         self.get_response = get_response
 
     def __call__(self, request: HttpRequest):
-        if not request.user.is_authenticated and request.path != "/login":
+        if not request.user.is_authenticated and request.path not in ["/login", "/health"] and "static" not in request.path:
             messages.add_message(request, messages.ERROR,
                                  "You must be logged in")
 

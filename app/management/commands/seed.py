@@ -40,13 +40,13 @@ class Command(BaseCommand):
 
     def handle_workers(self):
         fake = Faker()
-        for _ in range(300):
+        for _ in range(50):
             Worker.objects.create(
                 name=fake.name(), phone=fake.phone_number(), address=fake.address())
 
     def handle_customer(self):
         fake = Faker()
-        for _ in range(300):
+        for _ in range(50):
             Customer.objects.create(
                 name=fake.name(), phone=fake.phone_number(), address=fake.address())
 

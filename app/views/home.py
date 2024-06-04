@@ -38,12 +38,12 @@ def dashboard(request: HttpRequest) -> HttpResponse:
     total_orders = Order.objects.count()
 
     context = {
-        'orders_over_time': json.dumps(list(orders_over_time)),
+        'orders_over_time': json.dumps(list(orders_over_time), default=str),
         'orders_by_special_type': json.dumps(list(orders_by_special_type)),
         'colors_in_orders': json.dumps(list(colors_in_orders)),
         'materials_qty': materials_qty,
-        'customers_over_time': json.dumps(list(customers_over_time)),
-        'workers_over_time': json.dumps(list(workers_over_time)),
+        'customers_over_time': json.dumps(list(customers_over_time), default=str),
+        'workers_over_time': json.dumps(list(workers_over_time), default=str),
         'total_customers': total_customers,
         'total_workers': total_workers,
         'total_orders': total_orders

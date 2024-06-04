@@ -24,7 +24,8 @@ load_dotenv(BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY", "7O+0X0UJRZxcHZrU63f/cJmJtfed7uf/wKWa1EbKY/2Un/0bD2uCQApOdCTHmaCR9eITmzpBWoBF5VZvCmlgHQ==")
+SECRET_KEY = os.getenv(
+    "SECRET_KEY", "7O+0X0UJRZxcHZrU63f/cJmJtfed7uf/wKWa1EbKY/2Un/0bD2uCQApOdCTHmaCR9eITmzpBWoBF5VZvCmlgHQ==")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
@@ -84,11 +85,13 @@ WSGI_APPLICATION = "ui.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+USE_POSTGRES = os.getenv("USE_POSTGRES", "True") == "True"
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    } if os.getenv("DEBUG", "False") == "True" else {
+    } if not USE_POSTGRES else {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get("DBNAME"),
         "USER": os.environ.get("DBUSER"),
@@ -161,5 +164,5 @@ SECURE_SSL_REDIRECT = \
 if SECURE_SSL_REDIRECT:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_COOKIE_SECURE = os.getenv("DEBUG") == "False"
-SESSION_COOKIE_SECURE = os.getenv("DEBUG") == "False"
+CSRF_COOKIE_SECURE = DEBUG
+SESSION_COOKIE_SECURE = DEBUG
