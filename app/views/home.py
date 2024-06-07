@@ -1,5 +1,5 @@
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.db.models import Count, Sum
 import json
 
@@ -7,10 +7,11 @@ from ..models import Color, Customer, Material, Order, SpecialType, Worker
 
 
 def home(request: HttpRequest) -> HttpResponse:
-    if request.user.is_authenticated:
-        return redirect("Dashboard")
-
-    return redirect("Login")
+    return render(request, "app/index.html", {
+        "authed": request.user.is_authenticated,
+        "redirect_url": "/dashboard" if request.user.is_authenticated else "/login",
+        "orders": Order.objects.values("id", "ref_id")
+    })
 
 
 def dashboard(request: HttpRequest) -> HttpResponse:
