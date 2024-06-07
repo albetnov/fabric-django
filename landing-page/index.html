@@ -129,7 +129,7 @@
 
         <div>
           <div
-            class="border gap-2 md:gap-0 text-center border-slate-950 rounded-full px-5 py-2 w-fit before:content-[''] before:inline-block before:p-1 flex items-center before:bg-zinc-950 before:rounded-full">
+            class="border gap-2 text-center border-slate-950 rounded-full px-5 py-2 w-fit before:content-[''] before:inline-block before:p-1 flex items-center before:bg-zinc-950 before:rounded-full">
             Our Features
           </div>
 
@@ -147,7 +147,7 @@
 
     <section class="w-full bg-slate-950 p-16 mt-10 relative grid place-items-center" id="prediction">
       <div
-        class="text-white gap-2 md:gap-0 text-center border-2 border-slate-50 rounded-full px-5 py-2 w-fit before:content-[''] before:inline-block before:p-1 flex items-center before:bg-white before:rounded-full">
+        class="text-white gap-2 text-center border-2 border-slate-50 rounded-full px-5 py-2 w-fit before:content-[''] before:inline-block before:p-1 flex items-center before:bg-white before:rounded-full">
         Still Not Convinced?
       </div>
 
@@ -158,34 +158,30 @@
       </p>
 
       <div class="flex items-center gap-3">
-        <select class="mt-3 bg-amber-50 rounded-lg focus:ring focus:ring-amber-200">
+        <select
+          class="mt-3 rounded-lg border border-slate-600 bg-transparent text-white focus:ring-0 focus:border-slate-400">
           <option value="">Choose Any Order</option>
         </select>
       </div>
 
       <div class="mt-10 grid md:grid-cols-2 gap-6 max-w-xl mx-auto w-full">
-        <div class="w-full">
-          <div class="bg-amber-100 p-5 rounded-t-lg">
-            Order Overview
-          </div>
+        <div class="w-full border border-slate-600 rounded-md p-4">
+          <p class="text-lg font-semibold font-poppins text-white">Order Overview</p>
+          <hr class="border-slate-600 my-3" />
 
-          <div class="bg-amber-50 p-5">
-            <p>Cloth Type: <span class="font-bold">Jeans - Celana</span></p>
-            <p>Material: <span class="font-bold">Cotton</span></p>
-            <p>Quantity: <span class="font-bold">100</span></p>
-          </div>
+          <p class="text-white">Cloth Type: <span class="font-bold">Jeans - Celana</span></p>
+          <p class="text-white">Material: <span class="font-bold">Cotton</span></p>
+          <p class="text-white">Quantity: <span class="font-bold">100</span></p>
         </div>
 
-        <div class="w-full">
-          <div class="bg-amber-100 p-5 rounded-t-lg">
-            Additional Information
-          </div>
 
-          <div class="bg-amber-50 p-5">
-            <p>Worker Amount: <span class="font-bold">Many</span></p>
-            <p>Difficulty: <span class="font-bold">Hard</span></p>
-            <p>Ordered at: <span class="font-bold">2022-10-10</span></p>
-          </div>
+        <div class="w-full border border-slate-600 rounded-md p-4">
+          <p class="text-lg font-semibold font-poppins text-white">Additional Information</p>
+          <hr class="border-slate-600 my-3" />
+
+          <p class="text-white">Worker Amount: <span class="font-bold">Many</span></p>
+          <p class="text-white">Difficulty: <span class="font-bold">Hard</span></p>
+          <p class="text-white">Ordered at: <span class="font-bold">2022-10-10</span></p>
         </div>
       </div>
 
