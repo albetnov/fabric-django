@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-amber-50">
+<html lang="en" class="bg-amber-50 scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -30,12 +30,12 @@
 <body>
   <header>
     <nav class="py-4 px-14 flex items-center">
-      <h2 class="font-inter font-medium text-4xl">Cloth</h2>
+      <h2 class="font-inter font-medium text-3xl md:text-4xl flex-1 md:flex-none">Cloth</h2>
 
-      <ul class="font-poppins flex items-center gap-5 flex-1 ml-8 text-lg">
-        <li><a href="#" class="hover:underline hover:cursor-pointer">Home</a></li>
-        <li><a href="#" class="hover:underline hover:cursor-pointer">Features</a></li>
-        <li><a href="#" class="hover:underline hover:cursor-pointer">Prediction</a></li>
+      <ul class="font-poppins items-center gap-5 flex-1 ml-8 text-lg hidden md:flex">
+        <li><a href="#home" class="hover:underline hover:cursor-pointer">Home</a></li>
+        <li><a href="#features" class="hover:underline hover:cursor-pointer">Features</a></li>
+        <li><a href="#prediction" class="hover:underline hover:cursor-pointer">Prediction</a></li>
       </ul>
 
       <a
@@ -46,25 +46,25 @@
   </header>
 
   <main class="border-t-2 border-slate-950 rounded-t-3xl">
-    <div class="p-8">
-      <section class="relative">
+    <div class="p-3 md:p-8">
+      <section class="relative" id="home">
         <img src="/cloth_rack.jpg" alt="Cloth" class="w-full object-cover rounded-t-3xl brightness-50 max-h-[650px]" />
 
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <p class="text-white text-6xl font-inter font-semibold text-center">
+        <div class="absolute top-1/2 px-5 md:px-0 md:left-1/2 md:-translate-x-1/2 -translate-y-1/2">
+          <p class="text-white text-xl md:text-4xl lg:text-6xl font-inter font-semibold text-center">
             Cloth Factory Management
           </p>
 
-          <p class="text-white font-medium font-poppins text-3xl text-center mt-3">
+          <p class="text-white font-medium font-poppins text-lg md:text-2xl lg:text-3xl text-center mt-3">
             Simple, Modern, Flexible, and <span class="font-bold">Effecient</span>.
           </p>
 
-          <p class="text-2xl text-white mt-2 text-center">
+          <p class="md:text-2xl text-white mt-2 text-center">
             Our mission is to simplify your operations, enhance your productivity,
             and ensure the highest standards of quality.
           </p>
 
-          <a
+          <a href="#features"
             class="mx-auto block w-fit mt-2 bg-zinc-950 text-white px-8 py-3 rounded-full font-semibold border-2 group border-amber-50 transition-color duration-300 hover:bg-white hover:text-black hover:cursor-pointer">
             Learn More <i
               class="fa-solid fa-arrow-down ml-2 transition-transform duration-300 group-hover:translate-y-1"></i>
@@ -75,30 +75,30 @@
         <div class="absolute -bottom-5 p-10 w-full bg-gradient-to-t from-amber-50 via-amber-50"></div>
       </section>
 
-      <section class="container mx-auto grid grid-cols-2 mt-5 gap-10 items-center">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="relative group h-fit transition-transform duration-300 hover:scale-110">
-            <img src="https://source.unsplash.com/400x500?clothing"
-              class="rounded-lg transition-all duration-300 group-hover:brightness-50" />
+      <section class="container mx-auto grid lg:grid-cols-2 mt-5 gap-10 items-center" id="features">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="relative group h-fit transition-transform duration-300 hover:scale-105 md:hover:scale-110">
+            <img src="/customer.jpeg"
+              class="rounded-lg transition-all duration-300 group-hover:brightness-50 h-[250px] w-full object-cover md:w-auto md:object-none md:h-auto" />
 
             <div class="hidden group-hover:block absolute top-1/2 -translate-y-1/2 ">
-              <p class="text-white text-xl font-inter font-semibold text-center">
+              <p class="text-white text-lg md:text-xl font-inter font-semibold text-center">
                 Customer Management
               </p>
 
-              <p class="text-white font-medium font-poppins text-lg text-center mt-3">
+              <p class="text-white font-medium font-poppins md:text-lg text-center mt-3">
                 Manage your customers with ease. Easily add, update, and delete customers.
               </p>
             </div>
           </div>
 
-          <div class="space-y-4 mt-32">
-            <div class="relative group h-fit transition-transform duration-300 hover:scale-110">
-              <img src="https://source.unsplash.com/400x250?clothing"
-                class="rounded-lg transition-all duration-300 group-hover:brightness-50" />
+          <div class="space-y-4 md:mt-32">
+            <div class="relative group h-fit transition-transform duration-300 hover:scale-105 md:hover:scale-110">
+              <img src="/cloth.jpeg"
+                class="rounded-lg transition-all duration-300 group-hover:brightness-50 w-full object-cover md:w-auto md:object-none" />
 
-              <div class="hidden group-hover:block absolute top-1/2 -translate-y-1/2 ">
-                <p class="text-white text-xl font-inter font-semibold text-center">
+              <div class="hidden group-hover:block absolute top-1/2 -translate-y-1/2">
+                <p class="text-white text-lg md:text-xl font-inter font-semibold text-center">
                   Cloth Management
                 </p>
 
@@ -109,12 +109,12 @@
               </div>
             </div>
 
-            <div class="relative group h-fit transition-transform duration-300 hover:scale-110">
-              <img src="https://source.unsplash.com/400x250?clothing"
-                class="rounded-lg transition-all duration-300 group-hover:brightness-50" />
+            <div class="relative group h-fit transition-transform duration-300 hover:scale-105 md:hover:scale-110">
+              <img src="/order.jpeg"
+                class="rounded-lg transition-all duration-300 group-hover:brightness-50 w-full object-cover md:w-auto md:object-none" />
 
               <div class="hidden group-hover:block absolute top-1/2 -translate-y-1/2 ">
-                <p class="text-white text-xl font-inter font-semibold text-center">
+                <p class="text-white text-lg md:text-xl font-inter font-semibold text-center">
                   Order Management
                 </p>
 
@@ -145,7 +145,7 @@
       </section>
     </div>
 
-    <section class="w-full bg-slate-950 p-16 mt-10 relative grid place-items-center">
+    <section class="w-full bg-slate-950 p-16 mt-10 relative grid place-items-center" id="prediction">
       <div
         class="text-white border-2 border-slate-50 rounded-full px-5 py-2 w-fit before:content-[''] before:inline-block before:p-1 flex items-center gap-2 before:bg-white before:rounded-full">
         Still Not Convinced?
@@ -163,7 +163,7 @@
         </select>
       </div>
 
-      <div class="mt-10 flex gap-6 max-w-xl w-full">
+      <div class="mt-10 grid md:grid-cols-2 gap-6 max-w-xl mx-auto w-full">
         <div class="w-full">
           <div class="bg-amber-100 p-5 rounded-t-lg">
             Order Overview
@@ -173,8 +173,6 @@
             <p>Cloth Type: <span class="font-bold">Jeans - Celana</span></p>
             <p>Material: <span class="font-bold">Cotton</span></p>
             <p>Quantity: <span class="font-bold">100</span></p>
-            <span
-              class="font-bold bg-sky-200 border px-5 py-1 rounded-full border-sky-100 text-sky-700 mt-2 block w-fit">Blue</span>
           </div>
         </div>
 
@@ -210,7 +208,7 @@
       <div class="bg-amber-50 p-2 absolute bottom-3 left-24 -translate-x-2 rounded-lg"></div>
     </section>
 
-    <section class="p-8 mt-14 grid grid-cols-3">
+    <section class="p-8 mt-14 grid gap-5 md:gap-0 md:grid-cols-3">
       <div class="text-center">
         <h3 class="font-semibold text-6xl font-raleway">1k+</h3>
         <p class="text-lg font-poppins mt-5">Happy Customers</p>
@@ -230,15 +228,15 @@
       </div>
     </section>
 
-    <section class="mt-20 max-w-7xl w-full mx-auto relative mb-10">
-      <img src="https://source.unsplash.com/1280x300?clothing" alt="Cloth"
-        class="w-full object-cover rounded-xl brightness-50" />
+    <section class="mt-20 max-w-7xl px-3 xl:px-0 w-full mx-auto relative mb-10">
+      <img src="/clothing.jpeg" alt="Cloth" class="w-full object-cover min-h-[400px] rounded-xl brightness-50" />
 
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-        <h3 class="text-white text-4xl font-inter font-semibold">Ready to get started?</h3>
-        <p class="text-white font-medium font-poppins text-lg mt-3">Get started with Cloth Factory Management today.</p>
+        <h3 class="text-white text-lg md:text-3xl lg:text-4xl font-inter font-semibold">Ready to get started?</h3>
+        <p class="text-white font-medium font-poppins md:text-lg mt-3">Get started with Cloth Factory Management today.
+        </p>
         <a href="#"
-          class="block w-fit mx-auto mt-5 bg-slate-950 text-white px-8 py-3 rounded-full font-semibold border-2 group border-transparent transition-color duration-300 hover:bg-transparent hover:border-white hover:cursor-pointer mt-5">
+          class="block w-fit mx-auto mt-5 bg-slate-950 text-white px-8 py-3 rounded-full font-semibold border-2 group border-transparent transition-color duration-300 hover:bg-transparent hover:border-white hover:cursor-pointer mt-5 hover:backdrop-blur-lg">
           Get Started <i
             class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
         </a>
@@ -247,7 +245,7 @@
   </main>
 
   <footer class="w-full">
-    <div class="px-16 flex justify-around flex-wrap bg-slate-950 py-12">
+    <div class="px-16 flex md:justify-around flex-wrap bg-slate-950 py-12 gap-5 md:gap-0">
       <div class="max-w-xl">
         <h3 class="text-white font-raleway font-semibold text-3xl">Cloth</h3>
         <p class="text-white font-poppins mt-3">
@@ -294,9 +292,10 @@
         <h4 class="text-white font-raleway font-semibold text-2xl">Quick Links</h4>
 
         <ul class="mt-5">
-          <li><a href="#" class="text-white font-poppins hover:underline hover:cursor-pointer">Home</a></li>
-          <li><a href="#" class="text-white font-poppins hover:underline hover:cursor-pointer">Features</a></li>
-          <li><a href="#" class="text-white font-poppins hover:underline hover:cursor-pointer">Prediction</a></li>
+          <li><a href="#home" class="text-white font-poppins hover:underline hover:cursor-pointer">Home</a></li>
+          <li><a href="#features" class="text-white font-poppins hover:underline hover:cursor-pointer">Features</a></li>
+          <li><a href="#prediction" class="text-white font-poppins hover:underline hover:cursor-pointer">Prediction</a>
+          </li>
         </ul>
       </div>
     </div>
