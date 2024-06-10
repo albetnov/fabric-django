@@ -62,10 +62,7 @@ def index(request: HttpRequest) -> HttpResponse:
             current_date = pd.Timestamp.now().to_pydatetime().replace(
                 tzinfo=pytz.timezone("Asia/Jakarta"))
 
-            order_created_at_aware = order.created_at.replace(
-                tzinfo=pytz.timezone("Asia/Jakarta"))
-
-            order_created_at_aware = order_created_at_aware.replace(
+            order_created_at_aware = order.created_at.astimezone(pytz.timezone("Asia/Jakarta")).replace(
                 second=0, microsecond=0)
             current_date = current_date.replace(second=0, microsecond=0)
             estimation_date = order_created_at_aware + timedelta(hours=result)
