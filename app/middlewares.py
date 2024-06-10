@@ -13,7 +13,7 @@ class AuthMiddleware:
             messages.add_message(request, messages.ERROR,
                                  "You must be logged in")
 
-            if "assets" not in request.path:
+            if "static" not in request.path and "favicon.ico" not in request.path:
                 request.session["next"] = request.path
 
             return redirect("Login")

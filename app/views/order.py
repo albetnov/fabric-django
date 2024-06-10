@@ -1,10 +1,10 @@
 from django.http import HttpRequest, HttpResponse
 from django.contrib import messages
 from django.shortcuts import redirect, render
-from django.db import IntegrityError
+from django.db import IntegrityError, transaction
 from ulid import ULID
 
-from ..models import Order
+from ..models import Order, Material
 from ..forms import OrderForm
 
 
@@ -14,6 +14,7 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, "app/orders/index.html", {"orders": orders})
 
 
+@transaction.atomic
 def create(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
         form = OrderForm(request.POST)
@@ -32,8 +33,18 @@ def create(request: HttpRequest) -> HttpResponse:
                 ref_id=str(ULID())
             )
 
+            material = Material.objects.filter(
+                id=form.cleaned_data["material"]).first()
+
+            if material.qty < form.cleaned_data["qty"]:
+                form.add_error("qty", "Not enough material")
+                return render(request, "app/orders/form.html", {"state": "Create", "form": form})
+
+            material.qty -= form.cleaned_data["qty"]
+
             try:
                 order.save()
+                material.save()
 
                 messages.add_message(request, messages.SUCCESS, "Order saved")
                 return redirect("Orders")
